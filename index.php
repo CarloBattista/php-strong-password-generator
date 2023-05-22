@@ -18,7 +18,6 @@
 // Gestire ulteriori parametri per la password: quali caratteri usare fra numeri, lettere e simboli. Possono essere scelti singolarmente (es. solo numeri) oppure possono essere combinati fra loro (es. numeri e simboli, oppure tutti e tre insieme).
 // Dare all’utente anche la possibilità di permettere o meno la ripetizione di caratteri uguali.
 
-
 ?>
 
 <!DOCTYPE html>
@@ -45,18 +44,18 @@
         <div class="container_main bg-white p-3 rounded-2">
             <!-- Container Form -->
             <div class="container_form">
-                <form action="" method="GET">
+                <form action="functions.php" method="GET">
                     <!-- Row Length -->
                     <div class="row_length">
                         <span class="text-secondary">Lunghezza password:</span>
-                        <input type="number" class="form-control" required>
+                        <input type="number" class="form-control" name="length" min="8" max="32" required>
                     </div>
                     <!-- Row Repeat -->
                     <div class="row_repeat mt-3">
                         <span class="text-secondary">Consenti ripetizioni di uno o più caratteri:</span>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked>
+                            <label class="form-check-label" name="allow_repeat" for="flexRadioDefault1">Si</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
@@ -67,20 +66,20 @@
                     <div class="row_options mt-3">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Lettere</label>
+                            <label class="form-check-label" name="use_letters" for="flexCheckDefault">Lettere</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Numeri</label>
+                            <label class="form-check-label" name="use_numbers" for="flexCheckDefault">Numeri</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">Simboli</label>
+                            <label class="form-check-label" name="use_symbols" for="flexCheckDefault">Simboli</label>
                         </div>
                     </div>
                     <!-- Container Buttons -->
                     <div class="container_buttons mt-3">
-                        <button type="button" class="btn btn-primary">Invia</button>
+                        <button type="submit" class="btn btn-primary">Invia</button>
                         <button type="reset" class="btn btn-secondary">Annulla</button>
                     </div>
                 </form>
