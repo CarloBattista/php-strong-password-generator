@@ -37,12 +37,55 @@
     <!-- Container -->
     <div class="container">
         <!-- Heading -->
-        <div class="heading mt-5 mb-5">
-            <h1>Strong Password Generator</h1>
-            <h2>Genera una password sicura</h2>
+        <div class="heading text-center mt-5 mb-5">
+            <h1 class="text-secondary">Strong Password Generator</h1>
+            <h2 class="text-white">Genera una password sicura</h2>
         </div>
         <!-- Container Main -->
-        <div class="container_main"></div>
+        <div class="container_main bg-white p-3 rounded-2">
+            <!-- Container Form -->
+            <div class="container_form">
+                <form action="" method="GET">
+                    <!-- Row Length -->
+                    <div class="row_length">
+                        <span class="text-secondary">Lunghezza password:</span>
+                        <input type="number" class="form-control" required>
+                    </div>
+                    <!-- Row Repeat -->
+                    <div class="row_repeat mt-3">
+                        <span class="text-secondary">Consenti ripetizioni di uno o più caratteri:</span>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                            <label class="form-check-label" for="flexRadioDefault1">No</label>
+                        </div>
+                    </div>
+                    <!-- Row Options -->
+                    <div class="row_options mt-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Lettere</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Numeri</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">Simboli</label>
+                        </div>
+                    </div>
+                    <!-- Container Buttons -->
+                    <div class="container_buttons mt-3">
+                        <button type="button" class="btn btn-primary">Invia</button>
+                        <button type="reset" class="btn btn-secondary">Annulla</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
